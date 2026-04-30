@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/gonzaempanadas',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""
