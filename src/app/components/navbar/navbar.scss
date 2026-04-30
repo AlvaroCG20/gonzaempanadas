@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-4) 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-2) 0;
+
+    .nav-links li a:not(.nav-btn) {
+      color: var(--color-text-main);
+      text-shadow: none;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+
+    .navbar-logo-img {
+      height: 80px;
+      width: 80px;
+      box-shadow: none;
+    }
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.navbar-logo-img {
+  height: 140px;
+  width: 140px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+
+  li a {
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
+
+    &:hover:not(.nav-btn) {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.nav-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-surface);
+    flex-direction: column;
+    padding: var(--spacing-4);
+    box-shadow: var(--shadow-md);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    li a:not(.nav-btn) {
+      color: var(--color-text-main);
+      text-shadow: none;
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      display: block;
+    }
+  }
+}

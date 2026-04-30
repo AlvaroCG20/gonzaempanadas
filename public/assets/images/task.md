@@ -1,0 +1,19 @@
+- [x] Generar imágenes de alta calidad (Hero, Empanadas) usando IA para mockups premium.
+- [x] Configurar estilos globales (SCSS, variables de color basadas en la propuesta terracota/dorado, tipografías Outfit e Inter).
+- [x] Generar componentes Standalone en Angular:
+  - `Navbar`
+  - `Hero`
+  - `Products`
+  - `About`
+  - `Location`
+  - `Footer`
+  - `FloatingWhatsApp`
+- [x] Implementar Navbar con glassmorphism y responsive.
+- [x] Implementar Hero section con imagen de fondo y CTA principal.
+- [x] Implementar Products section con tarjetas (cards) modernas y hover effects.
+- [x] Implementar About section (Historia Familiar).
+- [x] Implementar Location section (Dirección y horarios en Valparaíso).
+- [x] Implementar Footer y botón flotante de WhatsApp.
+- [x] Integrar todos los componentes en `app.html` y `app.ts`.
+- [x] Añadir micro-animaciones (fade-in) y pulir diseño.
+- [x] Verificar funcionamiento y responsividad.

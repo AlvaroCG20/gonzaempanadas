@@ -1,0 +1,122 @@
+.footer {
+  background-color: var(--color-text-main);
+  color: white;
+  padding-top: var(--spacing-8);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+.footer-logo-wrapper {
+  height: 120px;
+  width: 120px;
+  margin-bottom: var(--spacing-4);
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
+}
+
+.footer-desc {
+  color: #cccccc;
+  margin-bottom: var(--spacing-4);
+  max-width: 300px;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-3);
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+  }
+
+  .icon {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.footer-links,
+.footer-contact {
+  h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-4);
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+
+  a {
+    color: #cccccc;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-secondary);
+      padding-left: 5px;
+    }
+  }
+}
+
+.footer-contact p {
+  color: #cccccc;
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: var(--spacing-4) 0;
+  text-align: center;
+  color: #999999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-5);
+  }
+}

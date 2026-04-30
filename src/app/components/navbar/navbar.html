@@ -1,0 +1,25 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container navbar-container">
+    <div class="logo">
+      <a href="#">
+        <div class="logo-wrapper">
+          <img src="/assets/images/logo.jpg" alt="Gonza Empanadas Logo" class="navbar-logo-img">
+        </div>
+      </a>
+    </div>
+
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li><a href="#hero" (click)="closeMenu()">Inicio</a></li>
+      <li><a href="#products" (click)="closeMenu()">Nuestras Empanadas</a></li>
+      <li><a href="#about" (click)="closeMenu()">Historia</a></li>
+      <li><a href="#location" (click)="closeMenu()">Locales</a></li>
+      <li><a href="https://wa.me/974438126" class="btn btn-primary nav-btn">¡Pide Ahora!</a></li>
+    </ul>
+
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
